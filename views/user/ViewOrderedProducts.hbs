@@ -1,0 +1,20 @@
+<section>
+    <div class="container pt-5">
+        <div class="row d-flex justify-content-center">
+            {{#each products}}
+            <div class="col-md-6 align-self-center"
+                style="text-align:center; display:flex; justify-content:center;align-items:center;">
+                <div class="card" style="width:15rem; height:26rem;">
+                    <img src="/product-images/{{this.product._id}}.jpg" class="card-img-top" alt="product image"
+                        style="height: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.product.Name}}</h5>
+                        <p class="card-text">{{this.product.Description}}</p>
+                        <p class="card-text">NO:{{this.quantity}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

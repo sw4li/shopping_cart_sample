@@ -1,0 +1,35 @@
+<section>
+    <div class="mt-3">
+        <h4 class="text-center fw-normal">ORDER HISTORY</h4>
+        <table class="table mt-4 ms-2">
+            <thead>
+                <tr>
+                    <th scope="col">date</th>
+                    <th scope="col">time</th>
+                    <th scope="col">mobile</th>
+                    <th scope="col">address</th>
+                    <th scope="col">pincode</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">status</th>
+                    <th scope="col">view order</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each order}}
+                <tr>
+                    <td>{{this.date}}</td>
+                    <td>{{this.time}}</td>
+                    <td>{{this.delivery.mobile}}</td>
+                    <td>{{this.delivery.address}}</td>
+                    <td>{{this.delivery.pincode}}</td>
+                    <td>{{this.TotalAmount}}</td>
+                    <td>{{this.paymentMethod}}</td>
+                    <td>{{this.status}}</td>
+                    <td><a href="/ViewOrderedProducts/{{this._id}}"  class="btn btn-primary">view product</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
